@@ -9,7 +9,7 @@ This repository includes a collection of modular scripts designed for various da
 ## Folder Structure
 
 ```
-src/
+scripts/
 ├── data_loading.py
 ├── data_cleaning.py
 ├── eda.py
@@ -32,7 +32,7 @@ src/
 **Example Usage**:
 
 ```python
-from src.data_loading import load_data
+from scripts.data_loading import load_data
 
 df_creditcard = load_data('../data/creditcard.csv')
 df_fraud_data = load_data('../data/Fraud_Data.csv')
@@ -53,7 +53,7 @@ df_fraud_data = load_data('../data/Fraud_Data.csv')
 **Example Usage**:
 
 ```python
-from src.data_cleaning import handle_missing_values, drop_duplicates, convert_to_datetime
+from scripts.data_cleaning import handle_missing_values, drop_duplicates, convert_to_datetime
 
 df_creditcard = drop_duplicates(df_creditcard)
 missing_values = handle_missing_values(df_creditcard)
@@ -75,7 +75,7 @@ df_fraud_data = convert_to_datetime(df_fraud_data, ['signup_time', 'purchase_tim
 **Example Usage**:
 
 ```python
-from src.eda import plot_histogram, plot_count
+from scripts.eda import plot_histogram, plot_count
 
 plot_histogram(df_creditcard, 'Amount', 'Distribution of Transaction Amounts', 'Amount', 'Frequency')
 plot_count(df_fraud_data, 'class', 'Distribution of Fraud Classes')
@@ -95,7 +95,7 @@ plot_count(df_fraud_data, 'class', 'Distribution of Fraud Classes')
 **Example Usage**:
 
 ```python
-from src.feature_engineering import create_transaction_frequency, extract_time_features
+from scripts.feature_engineering import create_transaction_frequency, extract_time_features
 
 df_fraud_data = create_transaction_frequency(df_fraud_data, 'user_id')
 df_fraud_data = extract_time_features(df_fraud_data, 'purchase_time')
@@ -115,7 +115,7 @@ df_fraud_data = extract_time_features(df_fraud_data, 'purchase_time')
 **Example Usage**:
 
 ```python
-from src.scaling_encoding import scale_column, encode_labels
+from scripts.scaling_encoding import scale_column, encode_labels
 
 df_creditcard = scale_column(df_creditcard, 'Amount')
 df_fraud_data = encode_labels(df_fraud_data, ['source', 'browser', 'sex'])
@@ -134,7 +134,7 @@ df_fraud_data = encode_labels(df_fraud_data, ['source', 'browser', 'sex'])
 **Example Usage**:
 
 ```python
-from src.geolocation import merge_ip_country
+from scripts.geolocation import merge_ip_country
 
 merged_data = merge_ip_country(df_fraud_data, df_IpAddress)
 ```
@@ -152,7 +152,7 @@ merged_data = merge_ip_country(df_fraud_data, df_IpAddress)
 **Example Usage**:
 
 ```python
-from src.utils import save_data
+from scripts.utils import save_data
 
 save_data(merged_data, '../data/merged_result.csv')
 ```
