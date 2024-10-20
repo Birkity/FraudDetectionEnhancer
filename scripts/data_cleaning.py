@@ -4,7 +4,10 @@ def handle_missing_values(df):
     return df.isnull().sum()
 
 def drop_duplicates(df):
-    df.drop_duplicates(inplace=True)
+    if isinstance(df, pd.DataFrame):
+        df.drop_duplicates(inplace=True)
+    else:
+        print("The input is not a DataFrame.")
     return df
 
 def convert_to_datetime(df, columns):

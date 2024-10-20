@@ -7,6 +7,15 @@ def scale_column(df, column):
 
 def encode_labels(df, columns):
     le = LabelEncoder()
+    
+    encoded_data = []
     for col in columns:
-        df[f'{col}_encoded'] = le.fit_transform(df[col])
-    return df
+        encoded_col = f'{col}_encoded'
+        encoded_series = le.fit_transform(df[col])
+        encoded_data.append(encoded_series)
+    
+    encoded_df = pd.DataFrame(encoded_data).T
+    
+    encoded_df.index = columns
+    
+    return encoded_df
