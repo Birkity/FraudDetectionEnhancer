@@ -55,58 +55,6 @@ The notebook is divided into the following sections:
 
 The completion of Task 1 sets the foundation for further feature engineering and model training. The detailed analysis and cleaned datasets will be used in subsequent tasks to create predictive models, ensuring that the project progresses smoothly toward effective fraud detection.
 
-Here's an example of a structured `README.md` file for your GitHub repository, formatted with `#` and other symbols for emphasis. This template is tailored to reflect the work done in Task 2, focusing on model building and training:
-
-```markdown
-# 📊 Task 2: Model Building and Training for Fraud Detection
-
-Welcome to the **Fraud Detection Enhancer** repository, where we build and train models to detect fraudulent activities in e-commerce and bank credit transactions. This README outlines the process and results of Task 2, which involves selecting and evaluating various models.
-
----
-
-## 📁 Repository Structure
-```
-
-├── notebooks/
-│ ├── task_2.ipynb # Jupyter notebook for model building and training
-├── scripts/
-│ ├── model_training.py # Python script for training models
-│ ├── preprocessing.py # Python script for data preprocessing
-├── data/
-│ ├── creditcard_cleaned.csv # Cleaned credit card transaction dataset
-│ ├── fraud_data_cleaned.csv # Cleaned e-commerce fraud dataset
-
-├── README.md # Project documentation (this file)
-├── requirements.txt # Required libraries and dependencies
-
-````
-
----
-
-## ⚙️ Setup Instructions
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/Birkity/fraud-detection-enhancer.git
-   cd fraud-detection-enhancer
-````
-
-2. **Create a Virtual Environment**
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install the Required Libraries**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Download Data**
-   - Place the cleaned CSV files (`creditcard_cleaned.csv` and `fraud_data_cleaned.csv`) in the `data/` directory.
-
 ---
 
 ## 🔍 Overview of Task 2
