@@ -144,15 +144,6 @@ The completion of Task 1 sets the foundation for further feature engineering and
 
 ---
 
-## 📈 Visualizations and Insights
-
-- **Model Performance Comparison**:
-  ![Model Comparison](images/model_comparison.png)
-- **ROC Curves**:
-  ![ROC Curves](images/roc_curves.png)
-- **Precision-Recall Tradeoff**:
-  ![Precision-Recall](images/precision_recall.png)
-
 ---
 
 ## 📬 Contact
@@ -164,4 +155,4 @@ For any queries or suggestions, please reach out to:
 
 ---
 
-Feel free to adjust the content to better match the specifics of your project!
+Feel free to adjust the content to better match the specifics of my project!
