@@ -3,4 +3,4 @@ myenv
 .env
 .vscode/
 data/
-notebooks/mlruns
+notebooks/mlruns/
