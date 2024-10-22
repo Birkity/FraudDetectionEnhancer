@@ -57,4 +57,102 @@ The completion of Task 1 sets the foundation for further feature engineering and
 
 ---
 
-Feel free to customize this as needed for your repository or add any additional project-specific details!
+## 🔍 Overview of Task 2
+
+### 🎯 Objective:
+
+- The main goal is to build, train, and evaluate models to accurately classify fraudulent transactions using cleaned and preprocessed datasets.
+
+### 💡 Key Steps:
+
+1. **Data Preparation**:
+
+   - Data cleaning and preprocessing: handled missing values, normalized numerical features, and encoded categorical variables.
+   - Train-test split: 80% for training and 20% for testing.
+
+2. **Model Selection**:
+
+   - **Logistic Regression**
+   - **Random Forest**
+   - **Gradient Boosting Machines (GBM)**
+   - **Deep Learning models**: Convolutional Neural Network (CNN), Recurrent Neural Network (RNN), Long Short-Term Memory (LSTM)
+
+3. **Model Training and Evaluation**:
+
+   - Trained each model using `model_training.py` or through the `task_2.ipynb`.
+   - Evaluated models using metrics like **Accuracy**, **Precision**, **Recall**, **F1 Score**, and **ROC-AUC**.
+   - Used **EarlyStopping** to prevent overfitting in deep learning models.
+
+4. **Logging with MLflow**:
+   - Tracked model training experiments, performance metrics, and saved models using **MLflow**.
+
+---
+
+## 🧠 Model Performance Summary
+
+| **Model**           | **Accuracy** | **Precision** | **Recall** | **F1 Score** | **ROC-AUC** |
+| ------------------- | ------------ | ------------- | ---------- | ------------ | ----------- |
+| Logistic Regression | 0.947        | 0.92          | 0.75       | 0.83         | 0.95        |
+| Random Forest       | 0.964        | 0.93          | 0.82       | 0.87         | 0.97        |
+| GBM                 | 0.969        | 0.94          | 0.85       | 0.89         | 0.98        |
+| CNN                 | 0.924        | 0.95          | 0.21       | 0.35         | 0.76        |
+| LSTM                | 0.956        | 0.99          | 0.54       | 0.70         | 0.76        |
+
+---
+
+## 📝 Detailed Model Training
+
+### 1. **Logistic Regression**:
+
+- Used as a baseline model for comparison.
+- Achieved **94.7% accuracy** on the test set with a balanced trade-off between **precision** and **recall**.
+
+### 2. **Random Forest**:
+
+- Outperformed the baseline model with an accuracy of **96.4%**.
+- Good at capturing complex patterns but takes more time to train.
+
+### 3. **Gradient Boosting Machines (GBM)**:
+
+- Achieved the best performance among tree-based models.
+- Suitable for handling class imbalances and providing robust predictions.
+
+### 4. **Convolutional Neural Network (CNN)**:
+
+- Captured temporal relationships in transaction sequences.
+- Higher precision but low recall, indicating a need for further tuning.
+
+### 5. **LSTM (Long Short-Term Memory)**:
+
+- Designed for capturing long-term dependencies in transaction data.
+- Balanced performance with **95.6% accuracy** and an **F1 score** of **0.70**.
+
+---
+
+## 🚀 How to Use the Models
+
+1. **Training Models**:
+
+   - Run the Jupyter notebook `task_2.ipynb` or the Python script:
+     ```bash
+     python src/model_training.py
+     ```
+
+2. **Evaluate on Custom Data**:
+   - Load your data into the same format as the `creditcard_cleaned.csv` or `fraud_data_cleaned.csv`.
+   - Preprocess the data using `src/preprocessing.py` and use the saved models from the `models/saved_models/` directory for prediction.
+
+---
+
+---
+
+## 📬 Contact
+
+For any queries or suggestions, please reach out to:
+
+- **Name:** Birkity Yishak
+- **Email:** lily.yishak2@gmail.com
+
+---
+
+Feel free to adjust the content to better match the specifics of my project!
