@@ -20,33 +20,39 @@ def update_fraud_trend_chart(_):
         response.raise_for_status()
         trend_data = response.json()
         df = pd.DataFrame(trend_data)
-        fig = px.line(df, x='timestamp', y='trend', title="Fraud Trends Over Time")
+        fig = px.line(df, x='purchase_date', y='fraud_cases', title="Fraud Trends Over Time")
     except (requests.exceptions.RequestException, ValueError) as e:
         print(f"Error fetching fraud trend data: {e}")
         fig = px.line(title="Fraud Trends Over Time - No Data Available")
     return fig
 
+
 @app.callback(Output('geographical-fraud-chart', 'figure'), Input('geographical-fraud-chart', 'id'))
 def update_geographical_fraud_chart(_):
     try:
-        response = requests.get("http://127.0.0.1:5000/api/geographical_fraud")
+        response = requests.get("http://127.0.0.1:5000/api/geographic_fraud")
         response.raise_for_status()
         geo_data = response.json()
         df = pd.DataFrame(geo_data)
-        fig = px.bar(df, x='country', y='fraud_cases', title="Geographical Fraud Cases")
+        fig = px.bar(df, x='ip_address', y='fraud_cases', title="Geographical Fraud Cases")
     except (requests.exceptions.RequestException, ValueError) as e:
         print(f"Error fetching geographical fraud data: {e}")
         fig = px.bar(title="Geographical Fraud Cases - No Data Available")
     return fig
+
 
 @app.callback(Output('device-browser-fraud-chart', 'figure'), Input('device-browser-fraud-chart', 'id'))
 def update_device_fraud_chart(_):
     try:
         response = requests.get("http://127.0.0.1:5000/api/device_browser_fraud")
         response.raise_for_status()
-        device_data = response.json()
-        df = pd.DataFrame(device_data)
-        fig = px.pie(df, names='device', values='fraud_cases', title="Fraud Cases by Device")
+        data = response.json()
+        
+        # Create two DataFrames for device and browser data
+        device_df = pd.DataFrame(list(data['device_fraud'].items()), columns=['device', 'fraud_cases'])
+        browser_df = pd.DataFrame(list(data['browser_fraud'].items()), columns=['browser', 'fraud_cases'])
+        
+        fig = px.pie(device_df, names='device', values='fraud_cases', title="Fraud Cases by Device")
     except (requests.exceptions.RequestException, ValueError) as e:
         print(f"Error fetching device fraud data: {e}")
         fig = px.pie(title="Fraud Cases by Device - No Data Available")

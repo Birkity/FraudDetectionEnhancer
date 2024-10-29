@@ -3,6 +3,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
+
 fraud_data = pd.read_csv(
     r'C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\data\Fraud_Data.csv',
     parse_dates=['signup_time', 'purchase_time']
@@ -22,11 +23,13 @@ def get_summary():
         'fraud_percentage': fraud_percentage
     })
 
+
 @app.route('/api/fraud_trends', methods=['GET'])
 def fraud_trends():
     trends = fraud_data[fraud_data['class'] == 1].groupby('purchase_date').size()
     trends_json = trends.reset_index().rename(columns={0: 'fraud_cases'}).to_dict(orient='records')
     return jsonify(trends_json)
+
 
 @app.route('/api/device_browser_fraud', methods=['GET'])
 def device_browser_fraud():
