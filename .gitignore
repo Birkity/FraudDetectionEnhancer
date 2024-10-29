@@ -5,3 +5,5 @@ myenv
 data/
 notebooks/mlruns/
 mlruns/
+results
+*.pkl

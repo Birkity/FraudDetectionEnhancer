@@ -1,0 +1,275 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.94.14:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:serve_model:Exception on /predict_fraud [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\scripts\serve_model.py", line 14, in predict_fraud
+    prediction = fraud_model.predict(data)
+                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'predict'
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:06:59] "[35m[1mPOST /predict_fraud HTTP/1.1[0m" 500 -
+ERROR:serve_model:Exception on /predict_fraud [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\scripts\serve_model.py", line 14, in predict_fraud
+    prediction = fraud_model.predict(data)
+                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'predict'
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:07:11] "[35m[1mPOST /predict_fraud HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.94.14:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+ERROR:serve_model:Exception on /predict_fraud [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\scripts\serve_model.py", line 20, in predict_fraud
+    prediction = fraud_model.predict(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 904, in predict
+    proba = self.predict_proba(X)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\validation.py", line 1012, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\_array_api.py", line 745, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'dict'
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:12:22] "[35m[1mPOST /predict_fraud HTTP/1.1[0m" 500 -
+ERROR:serve_model:Exception on /predict_fraud [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\scripts\serve_model.py", line 20, in predict_fraud
+    prediction = fraud_model.predict(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 904, in predict
+    proba = self.predict_proba(X)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\validation.py", line 1012, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\_array_api.py", line 745, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'dict'
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:12:25] "[35m[1mPOST /predict_fraud HTTP/1.1[0m" 500 -
+ERROR:serve_model:Exception on /predict_fraud [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\scripts\serve_model.py", line 20, in predict_fraud
+    prediction = fraud_model.predict(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 904, in predict
+    proba = self.predict_proba(X)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\validation.py", line 1012, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\_array_api.py", line 745, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'dict'
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:12:26] "[35m[1mPOST /predict_fraud HTTP/1.1[0m" 500 -
+ERROR:serve_model:Exception on /predict_fraud [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\scripts\serve_model.py", line 20, in predict_fraud
+    prediction = fraud_model.predict(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 904, in predict
+    proba = self.predict_proba(X)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 946, in predict_proba
+    X = self._validate_X_predict(X)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_forest.py", line 641, in _validate_X_predict
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\validation.py", line 1012, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\_array_api.py", line 745, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'dict'
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:12:27] "[35m[1mPOST /predict_fraud HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.31.94.14:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:28:04] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:34:40] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:34:43] "POST /predict_fraud HTTP/1.1" 200 -
+ERROR:serve_model:Exception occurred: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:38:18] "[35m[1mPOST /predict_fraud HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:38:30] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:38:32] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:38:40] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:38:54] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:39:03] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:39:04] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:40:32] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:40:33] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:44:56] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:48:09] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:48:10] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:48:18] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:48:19] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:48:24] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:59:46] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:59:52] "POST /predict_fraud HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 11:59:53] "POST /predict_fraud HTTP/1.1" 200 -
+ERROR:serve_model:Exception on /predict_credit [POST]
+Traceback (most recent call last):
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 1473, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 882, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 880, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\flask\app.py", line 865, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\scripts\serve_model.py", line 46, in predict_credit
+    prediction = credit_model.predict(data)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_gb.py", line 1612, in predict
+    raw_predictions = self.decision_function(X)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\ensemble\_gb.py", line 1565, in decision_function
+    X = self._validate_data(
+        ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\base.py", line 633, in _validate_data
+    out = check_array(X, input_name="X", **check_params)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\validation.py", line 1012, in check_array
+    array = _asarray_with_order(array, order=order, dtype=dtype, xp=xp)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\USER\Documents\OPLearning\10_Academy\Week_8_&_9\myenv\Lib\site-packages\sklearn\utils\_array_api.py", line 745, in _asarray_with_order
+    array = numpy.asarray(array, order=order, dtype=dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'dict'
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 12:14:43] "[35m[1mPOST /predict_credit HTTP/1.1[0m" 500 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 380-000-728
+ERROR:serve_model:Invalid input: Missing required columns
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 12:23:02] "[31m[1mPOST /predict_credit HTTP/1.1[0m" 400 -
+ERROR:serve_model:Invalid input: Missing required columns
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 12:23:09] "[31m[1mPOST /predict_credit HTTP/1.1[0m" 400 -
+ERROR:serve_model:Invalid input: Input X contains NaN.
+GradientBoostingClassifier does not accept missing values encoded as NaN natively. For supervised learning, you might want to consider sklearn.ensemble.HistGradientBoostingClassifier and Regressor which accept missing values encoded as NaNs natively. Alternatively, it is possible to preprocess the data, for instance by using an imputer transformer in a pipeline or drop samples with missing values. See https://scikit-learn.org/stable/modules/impute.html You can find a list of all estimators that handle NaN values at the following page: https://scikit-learn.org/stable/modules/impute.html#estimators-that-handle-nan-values
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 12:27:15] "[31m[1mPOST /predict_credit HTTP/1.1[0m" 400 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 12:32:25] "POST /predict_credit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 12:32:42] "POST /predict_credit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 12:35:03] "POST /predict_credit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 12:35:04] "POST /predict_credit HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [29/Oct/2024 12:35:17] "POST /predict_credit HTTP/1.1" 200 -
