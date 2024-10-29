@@ -26,7 +26,7 @@ Follow these steps to install and run the project.
 
 ### 1️⃣ **Clone the Repository**  
 ```bash
-git clone https://github.com/Birkity/FraudDetectionEnhancer
+git clone https://github.com/Birkity/FraudDetectionEnhancer.git
 cd fraud_detection_enhancer
 ```
 
